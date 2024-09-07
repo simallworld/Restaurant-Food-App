@@ -113,7 +113,7 @@ const Signup = () => {
             </Button>
 )}
         </div>
-        <Separator />
+        <Separator/>
         <p className="mt-3">
           Already have an account? {""}
           <Link to="/login" className="text-blue-500">
