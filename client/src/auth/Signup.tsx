@@ -35,10 +35,10 @@ const Signup = () => {
 
   
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
+    <div className="flex items-center justify-center ">
       <form
         onSubmit={loginSubmitHandler}
-        className="md:p-8 w-full max-w-md rounded-lg md:border border-gray-200 mx-4"
+        className="md:p-8 w-full max-w-md rounded-lg md:border border-gray-200 mx-4 w-screen"
       >
         <div className="mb-8">
           <h1 className="font-bold text-2xl font-sans">Delicious Food</h1>
