@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 //    email:"string",
 //    password:"string"
 // }
-
+const loading = false;
 const Login = () => {
   const [input, setInput] = useState<LoginInputState>({
     email: "",
@@ -36,10 +36,9 @@ const Login = () => {
       console.log(input);
   }
 
-  const loading = "false";
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
-      <form onSubmit={loginSubmitHandler} className="md:p-8 w-full max-w-md rounded-lg md:border border-gray-200 mx-4">
+    <div className="flex items-center justify-center">
+      <form onSubmit={loginSubmitHandler} className="md:p-8 w-full max-w-md rounded-lg md:border border-gray-200 mx-4 w-screen">
         <div className="mb-8">
           <h1 className="font-bold text-2xl font-sans">Delicious Food</h1>
         </div>
@@ -68,7 +67,7 @@ const Login = () => {
           />
         </div>
         <div className="mb-5">
-          {loading ? (
+        {loading ? (
             <Button disabled className="w-full bg-orange hover:bg-hoverOrange">
               <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait
             </Button>
@@ -82,7 +81,7 @@ const Login = () => {
           )}
 
           <div className="mt-3" text-xs>
-          <Link to="/forgot-password">Forgot Password</Link>
+          <Link to="/forgot-password" className="hover:text-blue-500 hover:underline">Forgot Password</Link>
           </div>
         </div>
         <Separator />
