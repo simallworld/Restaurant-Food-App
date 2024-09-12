@@ -1,23 +1,30 @@
 
 import './App.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import MainLayout from './MainLayout'
 import Signup from './auth/Signup'
 import Login from './auth/Login'
 import ForgetPassword from './auth/ForgetPassword'
 import ResetPassword from './auth/ResetPassword'
 import VerifyEmail from './auth/VerifyEmail'
-import Navbar from './components/Navbar'
+import HeroSection from './components/HeroSection'
+import MainLayout from './layout/MainLayout'
+import Profile from './components/Profile'
+import SearchPage from './components/SearchPage'
 
 const appRouter = createBrowserRouter([
   {
     path:"/",
-    element:<Navbar/>    // children:[
-
-    //   {
-    //     path:"/login"
-    //   }
-    // ]
+    element:<MainLayout/>,  
+    children:[
+      {
+        path:"/",
+        element:<HeroSection />
+      },
+      {
+        path:"/profile",
+        element:<Profile />
+      },
+    ]
   },
   {
     path:"/login",
@@ -38,6 +45,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/verify-email",
     element:<VerifyEmail/>
+  },
+  {
+    path:"/search/:id",
+    element:<SearchPage/>
   },
 ])
 
