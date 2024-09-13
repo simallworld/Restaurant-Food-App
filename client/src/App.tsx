@@ -24,6 +24,10 @@ const appRouter = createBrowserRouter([
         path:"/profile",
         element:<Profile />
       },
+      {
+        path:"/search/:text",
+        element:<SearchPage/>
+      },
     ]
   },
   {
@@ -46,10 +50,7 @@ const appRouter = createBrowserRouter([
     path:"/verify-email",
     element:<VerifyEmail/>
   },
-  {
-    path:"/search/:id",
-    element:<SearchPage/>
-  },
+  
 ])
 
 function App() {
