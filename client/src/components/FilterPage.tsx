@@ -16,9 +16,7 @@ const filterOptions: FilterOptionsState = [
 
 const FilterPage = () => {
 
- const appliedFilterHandler = (value:string) => {
-      alert(value);
- }  
+ const appliedFilterHandler = (value:string) => {}  
 
   return (
     <div className="md:w-72">
