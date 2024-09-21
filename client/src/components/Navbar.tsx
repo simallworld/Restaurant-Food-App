@@ -39,7 +39,7 @@ import {
 import { Separator } from "./ui/separator";
 
 const Navbar = () => {
-  const admin = false;
+  const admin = true;
   const loading = false;
   return (
     <div className="max-w-8xl mx-auto">
@@ -178,7 +178,7 @@ const MobileNavbar = () => {
             <span>Profile</span>
           </Link>
           <Link
-            to="/order"
+            to="/order/status"
             className="flex items-center text-black gap-4 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
           >
             <HandPlatter />
@@ -192,7 +192,7 @@ const MobileNavbar = () => {
             <span>Cart (0)</span>
           </Link>
           <Link
-            to="/menu"
+            to="/admin/menu"
             className="flex items-center text-black gap-4 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
           >
             <SquareMenu />
@@ -206,7 +206,7 @@ const MobileNavbar = () => {
             <span>Restaurant</span>
           </Link>
           <Link
-            to="/restaurant_orders"
+            to="/admin/orders"
             className="flex items-center text-black gap-4 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
           >
             <PackageCheck />
